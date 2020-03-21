@@ -4,7 +4,7 @@ import NewTask from "./NewTask";
 
 class ToDoList extends Component {
   state = {
-    todos: [{ task: "Wyjsc z pysiem" }, { task: "Zrobic taco" }]
+    todos: []
   };
   create = newTask => {
     this.setState({
@@ -13,7 +13,7 @@ class ToDoList extends Component {
   };
   render() {
     const todos = this.state.todos.map(todo => {
-      return <Todo task={todo.task} />;
+      return <Todo key={todo.id} task={todo.task} />;
     });
     return (
       <div>
