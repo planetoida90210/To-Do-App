@@ -13,7 +13,7 @@ class NewTask extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.createTask({ ...this.state, id: uuid() });
+    this.props.createTask({ ...this.state, id: uuid(), completed: false });
     this.setState({ task: "" });
   };
   render() {
