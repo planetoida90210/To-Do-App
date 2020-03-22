@@ -1,17 +1,54 @@
 import React, { Component } from "react";
 
 class Todo extends Component {
+  state = {
+    isEditing: false,
+    task: this.props.task
+  };
   handleRemove = () => {
     this.props.removeTodo(this.props.id);
   };
+  toggleEdit = () => {
+    this.setState({
+      isEditing: !this.state.isEditing
+    });
+  };
+  handleEdit = e => {
+    e.preventDefault();
+    this.props.updateTodo(this.props.id, this.state.task);
+    this.setState({
+      isEditing: false
+    });
+  };
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
   render() {
-    return (
-      <div>
-        <button>Edit</button>
-        <button onClick={this.handleRemove}>X</button>
-        <li>{this.props.task}</li>
-      </div>
-    );
+    if (this.state.isEditing) {
+      return (
+        <div>
+          <form onSubmit={this.handleEdit}>
+            <input
+              type='text'
+              value={this.state.task}
+              name='task'
+              onChange={this.handleChange}
+            />
+            <button>Zapisz</button>
+          </form>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <button onClick={this.toggleEdit}>Zmień</button>
+          <button onClick={this.handleRemove}>X</button>
+          <li>{this.props.task}</li>
+        </div>
+      );
+    }
   }
 }
 
