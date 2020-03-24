@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Todo.css";
 
 class Todo extends Component {
   state = {
@@ -50,7 +49,7 @@ class Todo extends Component {
           <button onClick={this.toggleEdit}>Zmień</button>
           <button onClick={this.handleRemove}>X</button>
           <li
-            className={this.props.completed ? "completed" : ""}
+            className={this.props.completed ? "app-task-completed" : "app-task"}
             onClick={this.handleToggle}
           >
             {this.props.task}

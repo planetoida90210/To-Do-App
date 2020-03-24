@@ -18,8 +18,7 @@ class NewTask extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor='task'>Dodaj zadanie</label>
+      <form onSubmit={this.handleSubmit} className='app-form'>
         <input
           type='text'
           placeholder='Dodaj zadanie'
@@ -27,8 +26,9 @@ class NewTask extends Component {
           name='task'
           value={this.state.task}
           onChange={this.handleChange}
+          className='app-form-input'
         />
-        <button>Dodaj do listy</button>
+        <button className='app-form-button'>Dodaj do listy</button>
       </form>
     );
   }

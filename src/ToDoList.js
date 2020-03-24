@@ -54,8 +54,8 @@ class ToDoList extends Component {
     return (
       <div>
         <h3 className='app-date'>Zadania na dziś: </h3>
+        <ul className='app-todos-container'>{todos}</ul>
         <NewTask createTask={this.create} />
-        <ul>{todos}</ul>
       </div>
     );
   }
