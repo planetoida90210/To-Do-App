@@ -45,9 +45,13 @@ class Todo extends Component {
       );
     } else {
       return (
-        <div>
-          <button onClick={this.toggleEdit}>Zmień</button>
-          <button onClick={this.handleRemove}>X</button>
+        <div className='app-task-container'>
+          <button className='app-btn-action' onClick={this.toggleEdit}>
+            <i className='fas fa-edit'></i>
+          </button>
+          <button className='app-btn-action' onClick={this.handleRemove}>
+            <i className='fas fa-trash-alt'></i>
+          </button>
           <li
             className={this.props.completed ? "app-task-completed" : "app-task"}
             onClick={this.handleToggle}
