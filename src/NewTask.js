@@ -18,7 +18,11 @@ class NewTask extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='app-form'>
+      <form
+        onSubmit={this.handleSubmit}
+        className='app-form'
+        autoComplete='off'
+      >
         <input
           type='text'
           placeholder='Dodaj zadanie'

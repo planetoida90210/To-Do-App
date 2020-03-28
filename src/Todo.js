@@ -32,14 +32,21 @@ class Todo extends Component {
     if (this.state.isEditing) {
       return (
         <div>
-          <form onSubmit={this.handleEdit} className='app-task-edit'>
+          <form
+            onSubmit={this.handleEdit}
+            className='app-task-edit'
+            autoComplete='off'
+          >
             <input
               type='text'
               value={this.state.task}
               name='task'
               onChange={this.handleChange}
+              className='app-task-edit-input'
             />
-            <button>Zapisz</button>
+            <button className='app-task-edit-button'>
+              <i className='far fa-save'></i>
+            </button>
           </form>
         </div>
       );

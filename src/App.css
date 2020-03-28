@@ -6,6 +6,8 @@
 body {
   font-family: "Lato", sans-serif;
   text-align: center;
+  background: floralwhite;
+  color: darkslategray;
 }
 
 /* mobile styles */
@@ -18,7 +20,7 @@ body {
     width: 100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: linear-gradient(#8a2387, #e94057, #f27121);
+    background: linear-gradient(#636363, #a2ab58);
     padding: 30px 0 150px;
     border-radius: 5px;
     margin-top: -5px;
@@ -57,6 +59,7 @@ body {
     cursor: pointer;
     font-size: 18px;
     padding: 10px;
+    background: none;
   }
   .app-btn-action:first-of-type {
     padding-right: 20px;
@@ -76,6 +79,35 @@ body {
     text-decoration: line-through;
   }
 
+  /* editing created task */
+
+  .app-task-edit {
+    width: 100vw;
+    height: 45px;
+    margin-top: 10px;
+    line-height: 45px;
+    background: rgba(150, 150, 150, 0.1);
+    display: flex;
+  }
+
+  .app-task-edit-input {
+    width: 70%;
+    background: #d4cfc3;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .app-task-edit-button {
+    width: 30%;
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+  }
+
   /* creating task */
   .app-form {
     position: fixed;
@@ -92,6 +124,7 @@ body {
     border-radius: 10px;
     border: solid 1px gray;
     outline: none;
+    background: #d4cfc3;
   }
 
   .app-form-input::placeholder {
@@ -99,7 +132,7 @@ body {
   }
 
   .app-form-button {
-    background: linear-gradient(#8a2387, #e94057, #f27121);
+    background: linear-gradient(#636363, #a2ab58);
     border: none;
     border-radius: 20px;
     text-transform: uppercase;
