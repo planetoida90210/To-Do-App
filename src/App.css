@@ -68,17 +68,45 @@ body {
     align-items: flex-start;
     padding-left: 30px;
     line-height: 45px;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
   .app-task-completed {
     color: gray;
     text-decoration: line-through;
   }
+
   /* creating task */
   .app-form {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
     bottom: 30px;
     left: 0;
-    display: flex;
     margin-top: 50vh;
+  }
+  .app-form-input {
+    font-size: 18px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: solid 1px gray;
+    outline: none;
+  }
+
+  .app-form-input::placeholder {
+    padding-left: 5px;
+  }
+
+  .app-form-button {
+    background: linear-gradient(#8a2387, #e94057, #f27121);
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+    outline: none;
   }
 }

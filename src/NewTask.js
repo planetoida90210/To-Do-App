@@ -28,7 +28,7 @@ class NewTask extends Component {
           onChange={this.handleChange}
           className='app-form-input'
         />
-        <button className='app-form-button'>Dodaj do listy</button>
+        <button className='app-form-button'>Dodaj</button>
       </form>
     );
   }
