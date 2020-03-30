@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Todo from "./Todo";
 import NewTask from "./NewTask";
-
+import TaskList from "./TaskList";
 class ToDoList extends Component {
   state = {
     todos: []
@@ -52,11 +52,20 @@ class ToDoList extends Component {
       );
     });
     return (
-      <div>
-        <h3 className='app-date'>Zadania na dziś: </h3>
-        <ul className='app-todos-container'>{todos}</ul>
-        <NewTask createTask={this.create} />
-      </div>
+      <Fragment>
+        <div className='main-header'>
+          <h1>
+            todo app <i className='fas fa-clipboard-list' />
+          </h1>
+          <p className='main-quote'>Bądź lepszą wersją siebie!</p>
+          <TaskList tasks={this.state.todos} />
+        </div>
+        <div>
+          <h3 className='app-date'>Zadania na dziś: </h3>
+          <ul className='app-todos-container'>{todos}</ul>
+          <NewTask createTask={this.create} />
+        </div>
+      </Fragment>
     );
   }
 }
