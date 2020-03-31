@@ -96,7 +96,7 @@ body {
   text-decoration: line-through;
 }
 
-/* editing created task */
+/* editing created task input */
 
 .app-task-edit {
   width: 100vw;
@@ -125,7 +125,7 @@ body {
   font-size: 20px;
 }
 
-/* creating task */
+/* creating task input */
 .app-form {
   position: fixed;
   display: flex;
@@ -148,6 +148,8 @@ body {
   padding-left: 5px;
 }
 
+/* adding button */
+
 .app-form-button {
   background: linear-gradient(#636363, #a2ab58);
   border: none;
@@ -159,6 +161,76 @@ body {
   color: white;
   outline: none;
 }
+@media screen and (min-width: 375px) {
+  /* creating task input */
+  .app-form-input {
+    padding: 10px 45px 10px 0;
+  }
+}
+@media screen and (min-width: 414px) {
+  .main-header {
+    padding: 30px 0 200px;
+    font-size: 20px;
+  }
+  .main-quote {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .main-task-counter {
+    padding-top: 25px;
+    font-size: 25px;
+  }
+  .single-task-counter {
+    font-size: 12px;
+  }
+  .single-task-number {
+    font-size: 28px;
+  }
 
-@media screen and (max-width: 360px) {
+  .app-date {
+    padding-top: 15px;
+    font-size: 20px;
+  }
+  /* tasks */
+  .app-btn-action {
+    font-size: 22px;
+  }
+  .app-task,
+  .app-task-completed {
+    font-size: 20px;
+  }
+  .app-task-container {
+    padding: 30px 0;
+  }
+  /* editing created task input */
+
+  .app-task-edit {
+    height: 60px;
+  }
+
+  .app-task-edit-input {
+    font-size: 20px;
+  }
+
+  .app-task-edit-button {
+    font-size: 24px;
+  }
+  /* creating task input */
+
+  .app-form-input {
+    font-size: 22px;
+    padding: 15px 10px;
+  }
+
+  .app-form-input::placeholder {
+    padding-left: 3px;
+  }
+
+  /* adding button */
+
+  .app-form-button {
+    font-size: 18px;
+    padding: 0 6px;
+    margin-left: 12px;
+  }
 }

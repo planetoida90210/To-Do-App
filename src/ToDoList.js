@@ -4,8 +4,7 @@ import NewTask from "./NewTask";
 import TaskList from "./TaskList";
 class ToDoList extends Component {
   state = {
-    todos: [],
-    done: []
+    todos: []
   };
   create = newTask => {
     this.setState({
@@ -36,7 +35,7 @@ class ToDoList extends Component {
       }
       return todo;
     });
-    this.setState({ todos: completedTask, done: completedTask });
+    this.setState({ todos: completedTask });
   };
   render() {
     const todos = this.state.todos.map(todo => {
