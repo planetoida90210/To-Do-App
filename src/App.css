@@ -304,9 +304,81 @@ body {
   /* adding button */
 
   .app-form-button {
-    border-radius: 20px;
     font-size: 28px;
     padding: 10px;
-    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* header */
+  .main-header {
+    padding: 30px 0 260px;
+    font-size: 30px;
+  }
+  .main-quote {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+  .main-task-counter {
+    padding-top: 20px;
+    font-size: 34px;
+  }
+  .single-task-counter {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .single-task-number {
+    padding-top: 1px;
+    font-size: 36px;
+  }
+  /* app */
+
+  .app-date {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+  /* tasks */
+  .app-todos-container {
+    margin-top: 60px;
+  }
+
+  .app-task-container {
+    padding: 50px 0;
+  }
+  .app-btn-action {
+    font-size: 36px;
+  }
+  .app-task,
+  .app-task-completed {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+  }
+
+  /* editing created task input */
+
+  .app-task-edit {
+    height: 100px;
+  }
+
+  .app-task-edit-input {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+  }
+
+  .app-task-edit-button {
+    font-size: 34px;
+  }
+
+  /* creating task input */
+
+  .app-form-input {
+    font-size: 48px;
+    padding: 10px 135px 10px 5px;
+  }
+
+  /* adding button */
+
+  .app-form-button {
+    font-size: 32px;
+    padding: 20px;
   }
 }
