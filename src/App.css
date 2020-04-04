@@ -204,7 +204,7 @@ body {
   /* tasks */
   .app-todos-container {
     margin-top: 10px;
-    max-height: 290px;
+    max-height: 360px;
   }
   .app-btn-action {
     font-size: 22px;
