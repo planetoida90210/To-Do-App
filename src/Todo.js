@@ -3,29 +3,29 @@ import React, { Component } from "react";
 class Todo extends Component {
   state = {
     isEditing: false,
-    task: this.props.task
+    task: this.props.task,
   };
   handleRemove = () => {
     this.props.removeTodo(this.props.id);
   };
   toggleEdit = () => {
     this.setState({
-      isEditing: !this.state.isEditing
+      isEditing: !this.state.isEditing,
     });
   };
-  handleEdit = e => {
+  handleEdit = (e) => {
     e.preventDefault();
     this.props.updateTodo(this.props.id, this.state.task);
     this.setState({
-      isEditing: false
+      isEditing: false,
     });
   };
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
-  handleToggle = e => {
+  handleToggle = (e) => {
     this.props.toggleTodo(this.props.id);
   };
   render() {
@@ -52,7 +52,13 @@ class Todo extends Component {
       );
     } else {
       return (
-        <div className='app-task-container'>
+        <div
+          className={
+            this.props.task.length > 20
+              ? "app-task-container-more"
+              : "app-task-container"
+          }
+        >
           <button className='app-btn-action' onClick={this.toggleEdit}>
             <i className='fas fa-edit'></i>
           </button>
@@ -60,7 +66,13 @@ class Todo extends Component {
             <i className='fas fa-trash-alt'></i>
           </button>
           <li
-            className={this.props.completed ? "app-task-completed" : "app-task"}
+            className={
+              this.props.completed
+                ? "app-task-completed"
+                : "app-task" && this.props.task.length > 20
+                ? "app-task-more"
+                : "app-task"
+            }
             onClick={this.handleToggle}
           >
             {this.props.task}

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -24,10 +25,12 @@ body {
   text-transform: uppercase;
   border-bottom: 1px solid #f5e482;
 }
+
 .main-quote {
   font-size: 10px;
   letter-spacing: 1px;
 }
+
 .main-task-counter {
   padding-top: 15px;
   border-top: 1px solid #f5e482;
@@ -37,22 +40,26 @@ body {
   margin-top: 20px;
   font-size: 20px;
 }
+
 .single-task-counter {
   font-size: 10px;
   letter-spacing: 0.8px;
   padding-top: 5px;
   font-weight: 200;
 }
+
 .single-task-number {
   padding-top: 5px;
   font-size: 26px;
   font-weight: 200;
 }
+
 /* app */
 
 .app-date {
   padding-top: 10px;
 }
+
 /* tasks */
 .app-todos-container {
   margin-top: 30px;
@@ -61,7 +68,8 @@ body {
   overflow: scroll;
 }
 
-.app-task-container {
+.app-task-container,
+.app-task-container-more {
   width: 100vw;
   height: 45px;
   margin-top: 10px;
@@ -73,6 +81,14 @@ body {
   background: rgba(150, 150, 150, 0.1);
   cursor: pointer;
 }
+
+.app-task-container-more {
+  height: auto;
+  max-height: 220px;
+  overflow: hidden;
+}
+
+
 .app-btn-action {
   border: none;
   cursor: pointer;
@@ -80,19 +96,29 @@ body {
   padding: 10px;
   background: none;
 }
+
 .app-btn-action:first-of-type {
   padding-right: 20px;
 }
+
 .app-task,
-.app-task-completed {
+.app-task-completed,
+.app-task-more {
   width: 80%;
   display: flex;
   align-items: flex-start;
-  padding-left: 30px;
+  padding-left: 10px;
   line-height: 45px;
   font-size: 16px;
   letter-spacing: 1px;
 }
+
+.app-task-more,
+.app-task-completed {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .app-task-completed {
   color: gray;
   text-decoration: line-through;
@@ -133,10 +159,11 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  bottom: 30px;
+  bottom: 20px;
   left: 0;
   margin-top: 50vh;
 }
+
 .app-form-input {
   font-size: 18px;
   padding: 10px 5px;
@@ -163,36 +190,52 @@ body {
   color: white;
   outline: none;
 }
+
 @media screen and (min-width: 375px) {
   .app-todos-container {
     max-height: 330px;
   }
+
+  .app-task-container-more {
+    max-height: 220px;
+  }
+
   /* creating task input */
   .app-form-input {
     padding: 10px 45px 10px 0;
   }
 }
+
 @media screen and (min-width: 375px) and (min-height: 812px) {
   .app-todos-container {
     max-height: 440px;
   }
+
+  .app-task-container-more {
+    max-height: 440px;
+  }
 }
+
 @media screen and (min-width: 414px) {
   .main-header {
     padding: 30px 0 200px;
     font-size: 20px;
   }
+
   .main-quote {
     font-size: 12px;
     letter-spacing: 1px;
   }
+
   .main-task-counter {
     padding-top: 25px;
     font-size: 25px;
   }
+
   .single-task-counter {
     font-size: 12px;
   }
+
   .single-task-number {
     font-size: 28px;
   }
@@ -201,21 +244,29 @@ body {
     padding-top: 10px;
     font-size: 20px;
   }
+
   /* tasks */
   .app-todos-container {
     margin-top: 10px;
     max-height: 360px;
   }
+
   .app-btn-action {
     font-size: 22px;
   }
+
   .app-task,
-  .app-task-completed {
+  .app-task-completed,
+  .app-task-more {
     font-size: 20px;
   }
-  .app-task-container {
+
+  .app-task-container,
+  .app-task-container-more {
     padding: 30px 0;
+    max-height: 360px;
   }
+
   /* editing created task input */
 
   .app-task-edit {
@@ -229,6 +280,7 @@ body {
   .app-task-edit-button {
     font-size: 24px;
   }
+
   /* creating task input */
 
   .app-form-input {
@@ -248,48 +300,61 @@ body {
     margin-left: 12px;
   }
 }
+
 @media screen and (min-width: 768px) {
+
   /* header */
   .main-header {
     padding: 30px 0 230px;
     font-size: 26px;
   }
+
   .main-quote {
     font-size: 16px;
     letter-spacing: 1px;
   }
+
   .main-task-counter {
     padding-top: 20px;
     font-size: 30px;
   }
+
   .single-task-counter {
     font-size: 14px;
     letter-spacing: 1px;
   }
+
   .single-task-number {
     padding-top: 1px;
     font-size: 32px;
   }
+
   /* app */
 
   .app-date {
     padding-top: 20px;
     font-size: 26px;
   }
+
   /* tasks */
   .app-todos-container {
     margin-top: 30px;
     max-height: 540px;
   }
 
-  .app-task-container {
+  .app-task-container,
+  .app-task-container-more {
     padding: 40px 0;
+    max-height: 540px;
   }
+
   .app-btn-action {
     font-size: 30px;
   }
+
   .app-task,
-  .app-task-completed {
+  .app-task-completed,
+  .app-task-more {
     font-size: 28px;
   }
 
@@ -323,48 +388,61 @@ body {
     padding: 10px;
   }
 }
+
 @media screen and (min-width: 1024px) and (min-height: 1366px) {
+
   /* header */
   .main-header {
     padding: 30px 0 260px;
     font-size: 30px;
   }
+
   .main-quote {
     font-size: 18px;
     letter-spacing: 1.5px;
   }
+
   .main-task-counter {
     padding-top: 20px;
     font-size: 34px;
   }
+
   .single-task-counter {
     font-size: 20px;
     letter-spacing: 1.5px;
   }
+
   .single-task-number {
     padding-top: 1px;
     font-size: 36px;
   }
+
   /* app */
 
   .app-date {
     padding-top: 30px;
     font-size: 30px;
   }
+
   /* tasks */
   .app-todos-container {
     margin-top: 60px;
     max-height: 770px;
   }
 
-  .app-task-container {
+  .app-task-container,
+  .app-task-container-more {
     padding: 50px 0;
+    max-height: 770px;
   }
+
   .app-btn-action {
     font-size: 36px;
   }
+
   .app-task,
-  .app-task-completed {
+  .app-task-completed,
+  .app-task-more {
     font-size: 32px;
     letter-spacing: 1.5px;
   }
