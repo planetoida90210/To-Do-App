@@ -1,4 +1,4 @@
-# To-Do-List by [Planetoida90210](http//:github.com/planetoida90210)
+# To-Do-List by [Planetoida90210](http://github.com/planetoida90210)
 
 ## Hello
 
